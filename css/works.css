@@ -1,0 +1,224 @@
+/*21863032_박신희*/
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "맑은 고딕";
+  font-size: 100%;
+}
+
+#fullpage {
+  height: 100%;
+}
+
+#fullpage section {
+  height: 100%;
+}
+
+a:link {
+  text-decoration: none;
+  color:#000;
+}
+
+a:visited {
+  text-decoration: none;
+  color:#000;
+}
+
+  h1, h2, a {
+  font-family: favoritregular;
+  font-size: 3.6vh;
+  line-height: 4.2vh;
+  font-weight:normal;
+}
+
+.navbar1 {
+  font-family: favoritregular;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "logo works about"
+}
+
+.logo {
+  grid-area: logo;
+  display: grid;
+  justify-content: start;
+  align-content: center;
+}
+
+.works {
+  grid-area: works;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.about {
+  grid-area: about;
+  display: grid;
+  justify-content: end;
+  align-content: center;
+}
+
+/*푸터부분 이메일과 인스타그램 링크 건 부분*/
+.feet {
+  grid-area: feet;
+  font-family: favoritregular;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "foot1 foot2";
+}
+
+.footer1 {
+  grid-area: foot1;
+  display: grid;
+  justify-content: start;
+  align-content: center;
+}
+
+.footer2 {
+  grid-area: foot2;
+  display: grid;
+  justify-content: end;
+  align-content: center;
+}
+
+/*버튼 스타일*/
+.btn {
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, white, pink, yellow 50%, #000 50%);
+  transition: background-position 0.3s ease-out;
+}
+
+.btn:hover {
+  background-position: -100% 0;
+}
+
+[class*="c_"] {
+  float: left;
+  padding:10px;
+}
+
+/*너비가 600픽셀 미만인 스마트폰을 위한 기본 설정*/
+[class*="c_"] {
+  width: 100%
+}
+
+/*너비가 768픽셀 이상인 노트북을 위한 설정*/
+@media only screen and (min-width:768px) {
+  .c_1 {width: 8.33%}
+  .c_2 {width: 16.66%}
+  .c_3 {width: 25%}
+  .c_4 {width: 33.33%}
+  .c_5 {width: 41.66%}
+  .c_6 {width: 50%}
+  .c_7 {width: 58.33%}
+  .c_8 {width: 66.66%}
+  .c_9 {width: 75%}
+  .c_10 {width: 83.33%}
+  .c_11 {width: 91.66%}
+  .c_12 {width: 100%}
+}
+
+header {
+  height: 80px;
+  padding:20px;
+  background-color:white;
+}
+
+aside#menu {
+  color:black;
+}
+
+aside#menu li {
+  padding:10px;
+  margin:5px 0 0 0;
+  background-color: white;
+}
+
+section#main {
+  padding:15px;
+}
+
+section#main p {
+  padding:5px;
+  font-size: 0.95em;
+  line-height:130%;
+}
+
+/*aside#photos img {
+  width:80%
+}
+
+aside#photos li {
+  margin:5px 0 0 0;
+}*/
+
+
+/*콘텐츠*/
+
+#zz #columns figure {
+display: inline-block;
+margin: 0;
+margin-bottom: 9px;
+padding: 5px;
+text-align: center;
+font-size: 16px;
+font-family: 'Noto Sans KR', 'sans-serif';
+position: relative;
+}
+#zz #columns figure img {
+width: 50%;
+height: ;
+transition: all 0.6s;
+}
+#zz #columns figure img:hover {
+filter: brightness(50%);
+}
+#zz #columns figcaption p {
+position: absolute;
+z-index: 1;
+left: 50px;
+bottom: 40px;
+color: rgba(255,255,255,0);
+transition: all 0.9s;
+}
+/*사진 설명*/
+#zz #columns figure:hover figcaption p {
+position: absolute;
+z-index: 1;
+left: 700px;
+bottom: 40px;
+color: white;
+}
+
+/*추천 창*/
+
+
+#good {
+  top: 25px;
+  left: 320px;
+}
